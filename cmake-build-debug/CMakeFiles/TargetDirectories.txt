@@ -1,0 +1,3 @@
+F:/C++/Projects/RFID/cmake-build-debug/CMakeFiles/RFID.dir
+F:/C++/Projects/RFID/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/C++/Projects/RFID/cmake-build-debug/CMakeFiles/rebuild_cache.dir
