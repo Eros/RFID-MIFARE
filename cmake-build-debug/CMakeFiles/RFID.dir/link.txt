@@ -1,2 +1,0 @@
-C:\MinGW\bin\ar.exe qc libRFID.a  CMakeFiles/RFID.dir/library.c.obj
-C:\MinGW\bin\ranlib.exe libRFID.a
