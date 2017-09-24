@@ -4,10 +4,23 @@
 
 #include <spi.h>
 
-void mrfc()
+void mfrc552()
 {
-    unsigned int byte;
-    //todo reset
+    uint8_t byte;
+    mfrc522_reset();
+
+    mfrc522_write(TModeReg, 0x80);
+    mfrc522_write(TPrescalerReg, 0x3E);
+    mfrc522_write(TReload_Reg1, 30);
+    mfrc522_write(TReload_Reg2, 0);
+    mfrc522_write(TxASKReg, 0x40);
+    mfrc522_write(ModeReg, 0x3D);
+
+    byte = mfrc522_read(TxControlReg);
+    if(!(byte&0x30))
+    {
+        mfrc522_write(TxControlReg, byte|0x03);
+    }
 }
 void mfrc522_write(uint8_t reg, uint8_t data)
 {
